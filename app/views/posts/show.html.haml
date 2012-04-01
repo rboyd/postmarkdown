@@ -1,3 +1,7 @@
+- content_for :title, resource.title
+- content_for :keywords, resource.keywords.join(',')
+- content_for :description, resource.description
+
 = render 'feed_link'
 
 = render resource, :summary => false

@@ -54,6 +54,14 @@ class Post
     metadata[:email]
   end
 
+  def keywords
+    metadata[:keywords]
+  end
+
+  def description
+    metadata[:description]
+  end
+
   def date
     @date ||= Time.zone.parse(metadata[:date] || @date_str).to_date
   end
