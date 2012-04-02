@@ -11,6 +11,7 @@ class PostsController < ApplicationController
     response.headers['Expires'] = max_age.from_now.httpdate
     response.content_type = 'application/atom+xml'
     fresh_when :last_modified => Post.feed_last_modified
+    render layout: false
   end
 
   protected
